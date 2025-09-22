@@ -1,7 +1,7 @@
-/* Importação das fontes do Google Fonts */
+/* Importação das fontes */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
-/* Reset básico para remover margens e paddings padrão do navegador */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -57,20 +57,38 @@ nav ul li a:hover {
     margin-left: 20px;
     font-size: 1.2rem;
     transition: color 0.3s ease;
+    position: relative; /* Para o contador do carrinho */
 }
 
 .icons a:hover {
     color: #a87f5d;
 }
 
+/* Contador do carrinho */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #a87f5d;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
 /* Estilo do Banner Principal (Hero) */
 .hero-banner {
-    background-image: url('https://via.placeholder.com/1500x600/5d4037/fff?text=Banner+da+Texas+Farm'); /* Imagem de fundo */
+    background-image: url('imagens/banner.jpg'); /* COLOCAR IMAGEM DO BANNER AQUI */
     background-size: cover;
     background-position: center;
     color: #fff;
     text-align: center;
     padding: 10rem 2rem;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-banner h1 {
@@ -94,6 +112,7 @@ nav ul li a:hover {
     font-weight: 700;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
 .btn-shop:hover {
@@ -134,7 +153,8 @@ nav ul li a:hover {
 
 .product-card img {
     width: 100%;
-    height: auto;
+    height: 400px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
     display: block;
 }
 
@@ -153,12 +173,14 @@ nav ul li a:hover {
 .btn-add {
     background-color: #333;
     color: #fff;
+    border: none;
     padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
     margin-bottom: 1.5rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-add:hover {
@@ -213,7 +235,7 @@ footer {
     border-top: 1px solid #444;
 }
 
-/* Responsividade Básica (para telas menores) */
+/* Responsividade */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
