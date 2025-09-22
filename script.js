@@ -1,34 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const cart = [];
-    const addToCartButtons = document.querySelectorAll('.btn-add');
+    // Simulação do carrinho, idealmente viria de um backend
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartCountSpan = document.querySelector('.cart-count');
 
-    // Função para atualizar o número de itens no ícone do carrinho
+    // Funções de utilidade
     function updateCartCount() {
         cartCountSpan.textContent = cart.length;
     }
 
-    // Adiciona um evento de clique a todos os botões "Adicionar ao Carrinho"
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.preventDefault(); // Impede o comportamento padrão do link
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
 
-            const productCard = button.closest('.product-card');
-            const productName = productCard.querySelector('h3').textContent;
-            const productPrice = productCard.querySelector('p').textContent;
-
-            const newItem = {
-                name: productName,
-                price: productPrice,
-                id: Date.now() // Gera um ID único simples
-            };
-
-            cart.push(newItem);
-            console.log("Carrinho atual:", cart); // Exibe o carrinho no console do navegador
-
-            updateCartCount();
-            alert(`${productName} adicionado ao carrinho!`);
+    // Lógica para adicionar itens ao carrinho
+    const addToCartButtons = document.querySelectorAll('.btn-add');
+    if (addToCartButtons.length > 0) {
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                // Apenas para demonstração, vamos simular que adicionamos um item
+                const newItem = { name: "Produto de Exemplo", price: "R$ 100,00" };
+                cart.push(newItem);
+                saveCart();
+                updateCartCount();
+                alert(`${newItem.name} adicionado ao carrinho!`);
+            });
         });
-    });
+    }
+
+    // Lógica para a página de Pagamento (pagamento.html)
+    if (document.body.classList.contains('pagamento-page')) {
+        const cartItemsList = document.getElementById('cart-items');
+        const cartTotalValue = document.getElementById('cart-total-value');
+        const paymentForm = document.getElementById('payment-form');
+
+        function renderCartItems() {
+            cartItemsList.innerHTML = ''; // Limpa a lista
+            let total = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${item.name}</span><span>${item.price}</span>`;
+                cartItemsList.appendChild(li);
+                total += parseFloat(item.price.replace('R$ ', '').replace(',', '.'));
+            });
+            cartTotalValue.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+        }
+        
+        renderCartItems();
+
+        paymentForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert("Pagamento processado com sucesso! Obrigado por sua compra.");
+            localStorage.removeItem('cart'); // Limpa o carrinho após a compra
+            window.location.href = 'index.html'; // Redireciona para a página inicial
+        });
+    }
+
+    // Chamada inicial para atualizar o contador
+    updateCartCount();
 });
