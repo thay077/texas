@@ -3,13 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
 }
 
 body {
-    background-color: #f4f4f4; /* Fundo cinza claro */
+    background-color: #f4f4f4; 
     color: #333;
     line-height: 1.6;
+    font-size: 16px; 
 }
 
 .container {
@@ -19,51 +20,56 @@ body {
     padding: 0 15px;
 }
 
-/* CORES CHAVE (Western Style) */
+/* CORES CHAVE (Western Profissional) */
 :root {
     --leather-brown: #4E3629; /* Marrom Couro (Principal) */
     --desert-sand: #F0E6D2; /* Areia/Fundo Claro */
-    --denim-blue: #1565C0; /* Azul Jeans (Destaque) */
-    --accent-gold: #B8860B; /* Dourado/Fivela */
+    --denim-blue: #1565C0; /* Azul Jeans */
+    --accent-orange: #E95420; /* Laranja Queimado (Chamativo/Destaque) */
 }
 
-/* BOTÕES GLOBAIS */
+/* BOTÕES GLOBAIS (Fácil de Clicar) */
 .btn-primary {
     display: inline-block;
-    background-color: var(--denim-blue);
+    background-color: var(--accent-orange); 
     color: white;
-    padding: 12px 25px;
+    padding: 15px 30px; 
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px; 
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
-    background-color: var(--accent-gold);
+    background-color: var(--leather-brown);
 }
 
 .btn-secondary {
     display: inline-block;
     background-color: var(--leather-brown);
     color: white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px;
     transition: background-color 0.3s;
+    font-size: 0.9em;
 }
 
 .btn-secondary:hover {
-    background-color: var(--accent-gold);
+    background-color: var(--accent-orange);
 }
 
 /* CABEÇALHO (HEADER) */
 .main-header {
     background-color: var(--leather-brown);
     color: white;
-    padding: 15px 0;
-    border-bottom: 5px solid var(--accent-gold);
+    padding: 20px 0; 
+    border-bottom: 5px solid var(--accent-orange); 
 }
 
 .main-header .container {
@@ -73,9 +79,8 @@ body {
 }
 
 .logo {
-    font-size: 1.8em;
+    font-size: 2em; 
     font-weight: bold;
-    color: white;
 }
 
 .main-nav ul {
@@ -86,36 +91,36 @@ body {
 .main-nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 18px; 
     display: block;
     transition: background-color 0.3s;
-    border-bottom: 2px solid transparent;
+    font-weight: 500;
 }
 
-.main-nav ul li a:hover,
 .main-nav ul li a.active {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-bottom: 2px solid var(--accent-gold);
+    border-bottom: 3px solid var(--accent-orange); 
 }
 
 .user-actions a {
     color: white;
     text-decoration: none;
-    margin-left: 15px;
-    font-size: 0.9em;
+    margin-left: 20px;
+    font-size: 1em;
+    font-weight: 500;
 }
 
 /* SEÇÃO DESTAQUE (HERO) */
 .hero {
-    /* Imagem simulada de fundo para dar o toque de rancho/moda */
-    background: url('https://via.placeholder.com/1200x400/A0522D/FFFFFF?text=Moda+Western+Texas+Ranch+Wear') no-repeat center center/cover;
-    height: 400px;
+    /* Use uma imagem de 1200x450 aqui */
+    background: url('https://via.placeholder.com/1200x450/A0522D/FFFFFF?text=IMAGEM+PRINCIPAL+COLECAO+WESTERN') no-repeat center center/cover; 
+    height: 450px; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .hero::before {
@@ -125,7 +130,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    background-color: rgba(0, 0, 0, 0.55); 
 }
 
 .hero-content {
@@ -134,17 +139,17 @@ body {
 }
 
 .hero h2 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 3.5em; 
+    margin-bottom: 15px;
     text-shadow: 2px 2px 4px #000;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    font-size: 1.3em;
+    margin-bottom: 40px;
 }
 
-/* CATEGORIAS EM DESTAQUE / LISTA DE PRODUTOS */
+/* CONTEÚDO E LISTA DE PRODUTOS */
 .page-content {
     padding: 50px 0;
     min-height: 400px;
@@ -152,71 +157,84 @@ body {
 
 .page-content h2 {
     color: var(--leather-brown);
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--accent-gold);
-    padding-bottom: 5px;
-    font-size: 2.2em;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--accent-orange); 
+    padding-bottom: 10px;
+    font-size: 2.4em;
+    font-weight: 700;
 }
 
 .item-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas para loja */
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
     margin-top: 30px;
 }
 
 .product-card {
-    border: 1px solid #ccc;
-    padding: 15px;
+    border: 1px solid #ddd;
+    padding: 20px; 
     text-align: center;
     background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    transition: all 0.2s;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+.product-image-placeholder {
+    width: 100%;
+    height: 200px; 
+    background-color: var(--desert-sand);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    color: var(--leather-brown);
+    font-style: italic;
+    border: 1px dashed #ccc;
 }
 
 .product-card h4 {
     color: var(--denim-blue);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 .product-card p.price {
     font-weight: bold;
-    color: var(--accent-gold);
-    font-size: 1.3em;
-    margin: 10px 0;
+    color: var(--accent-orange); 
+    font-size: 1.5em; 
+    margin: 15px 0;
 }
 
-/* RODAPÉ (FOOTER) */
+/* FOOTER */
 .main-footer {
     background-color: var(--leather-brown);
     color: var(--desert-sand);
-    padding: 30px 0 15px 0;
+    padding: 40px 0 20px 0; 
     font-size: 0.9em;
 }
 
 .footer-links {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-links h4 {
-    color: var(--accent-gold);
-    margin-bottom: 10px;
+    color: var(--accent-orange); 
+    margin-bottom: 15px;
+    font-size: 1.1em;
 }
 
 .footer-links ul {
@@ -227,7 +245,7 @@ body {
     color: var(--desert-sand);
     text-decoration: none;
     display: block;
-    padding: 3px 0;
+    padding: 5px 0;
 }
 
 .footer-links ul li a:hover {
@@ -236,6 +254,13 @@ body {
 
 .copyright {
     text-align: center;
-    font-size: 0.8em;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px;
+}
+
+.copyright a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin: 0 10px;
 }
