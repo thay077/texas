@@ -1,40 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos os Produtos | Texas Farm Store</title>
+    <title>Loja/Produtos - Texas Ranch & Farm Supply</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        </header>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">Texas Ranch & Farm Supply</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html" class="active">Loja/Produtos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#">Minha Conta</a>
+                <a href="#">Carrinho (0)</a>
+            </div>
+        </div>
+    </header>
 
-    <main class="main-content">
-        <h1 class="page-title">Todos os Produtos</h1>
-        <div class="product-grid">
+    <section class="page-content container">
+        <h2>Nosso Catálogo de Produtos</h2>
+
+        <h3 id="animais" style="margin-top: 30px; color: var(--brown-text);">Nutrição Animal</h3>
+        <div class="item-list">
             <div class="product-card">
-                <img src="imagens/camisa_xadrez.jpg" alt="Camisa Xadrez Clássica">
-                <h3>Camisa Xadrez Clássica</h3>
-                <p>R$ 150,00</p>
-                <a href="produto_detalhe.html" class="btn-add">Ver Detalhes</a>
+                <img src="https://via.placeholder.com/250x200?text=Racao+Gado" alt="Ração Gado">
+                <h4>Ração para Gado de Corte Premium 50kg</h4>
+                <p>Alto teor proteico para o ganho de peso ideal.</p>
+                <p class="price">R$ 189,90</p>
+                <a href="#" class="btn-secondary">Detalhes</a>
             </div>
             <div class="product-card">
-                <img src="imagens/bone_texas.jpg" alt="Boné Texas Edition">
-                <h3>Boné Texas Edition</h3>
-                <p>R$ 80,00</p>
-                <a href="produto_detalhe.html" class="btn-add">Ver Detalhes</a>
+                <img src="https://via.placeholder.com/250x200?text=Racao+Cavalo" alt="Ração Cavalo">
+                <h4>Ração Equina de Performance 20kg</h4>
+                <p>Formulação energética para cavalos de trabalho.</p>
+                <p class="price">R$ 145,00</p>
+                <a href="#" class="btn-secondary">Detalhes</a>
             </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x200?text=Sal+Mineral" alt="Sal Mineral">
+                <h4>Suplemento Mineral para Pasto</h4>
+                <p>Essencial para a saúde e reprodução do rebanho.</p>
+                <p class="price">R$ 95,50</p>
+                <a href="#" class="btn-secondary">Detalhes</a>
             </div>
-    </main>
+        </div>
 
-    <footer>
-        </footer>
+        <h3 id="vestuario" style="margin-top: 50px; color: var(--brown-text);">Vestuário e Calçados Western</h3>
+        <div class="item-list">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x200?text=Bota+Couro" alt="Bota Couro">
+                <h4>Bota Texana de Couro Genuíno</h4>
+                <p>Conforto e durabilidade para o trabalho diário.</p>
+                <p class="price">R$ 599,00</p>
+                <a href="#" class="btn-secondary">Detalhes</a>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x200?text=Chapeu" alt="Chapéu">
+                <h4>Chapéu de Feltro Modelo Classic Rancher</h4>
+                <p>Proteção solar e estilo autêntico.</p>
+                <p class="price">R$ 320,00</p>
+                <a href="#" class="btn-secondary">Detalhes</a>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x200?text=Cinto" alt="Cinto">
+                <h4>Cinto de Couro com Fivela Texas</h4>
+                <p>Acessório robusto com detalhes em metal.</p>
+                <p class="price">R$ 110,00</p>
+                <a href="#" class="btn-secondary">Detalhes</a>
+            </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div><h4>Institucional</h4><ul><li><a href="sobre.html">Nossa História</a></li><li><a href="#">Política de Privacidade</a></li><li><a href="#">Trabalhe Conosco</a></li></ul></div>
+                <div><h4>Localizações</h4><p>Uvalde, Alpine, Leakey (Simulação)</p><p>Telefone: (830) 555-0000</p></div>
+                <div class="social-media"><h4>Siga-nos</h4><p> [Facebook] [Instagram] [Youtube] </p></div>
+            </div>
+            <div class="copyright">&copy; 2025 Texas Ranch & Farm Supply (Simulação). Todos os direitos reservados.</div>
+        </div>
+    </footer>
 </body>
 </html>

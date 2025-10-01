@@ -1,72 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texas Farm Store</title>
+    <title>Texas Ranch & Farm Supply - Seu Fornecedor do Campo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <header>
-        <div class="logo">Texas Farm</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="icons">
-            <div class="search-bar-container">
-                <input type="text" placeholder="Pesquisar..." class="search-input">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">Texas Ranch & Farm Supply</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="produtos.html">Loja/Produtos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#">Minha Conta</a>
+                <a href="#">Carrinho (0)</a>
             </div>
-            <a href="#"><i class="fas fa-user"></i></a>
-            <a href="pagamento.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
         </div>
     </header>
 
-    <section class="hero-banner">
-        <h1>Seu estilo country em um só lugar.</h1>
-        <p>As melhores roupas e acessórios da fazenda para a cidade.</p>
-        <a href="produtos.html" class="btn-shop">Comprar Agora</a>
-    </section>
-
-    <section class="featured-products">
-        <h2>Destaques da Semana</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="imagens/camisa_xadrez.jpg" alt="Camisa Xadrez Clássica">
-                <h3>Camisa Xadrez Clássica</h3>
-                <p>R$ 150,00</p>
-                <a href="produto_detalhe.html" class="btn-add">Ver Detalhes</a>
-            </div>
-            <div class="product-card">
-                <img src="imagens/bone_texas.jpg" alt="Boné Texas Edition">
-                <h3>Boné Texas Edition</h3>
-                <p>R$ 80,00</p>
-                <a href="produto_detalhe.html" class="btn-add">Ver Detalhes</a>
-            </div>
-            <div class="product-card">
-                <img src="imagens/bota_marrom.jpg" alt="Bota de Couro Marrom">
-                <h3>Bota de Couro Marrom</h3>
-                <p>R$ 450,00</p>
-                <a href="produto_detalhe.html" class="btn-add">Ver Detalhes</a>
-            </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Tudo o que seu Rancho precisa, em um só lugar!</h2>
+            <p>Há mais de 50 anos servindo o Texas com nutrição animal, vestuário Western e equipamentos robustos.</p>
+            <a href="produtos.html" class="btn-primary">VER PRODUTOS EM PROMOÇÃO</a>
         </div>
     </section>
 
-    <footer>
-        </footer>
+    <section class="categories">
+        <div class="container">
+            <h3>Nossas Categorias Principais</h3>
+            <div class="category-grid">
+                <div class="category-item">
+                    <h4>Nutrição Animal</h4>
+                    <p>Rações de alta performance para gado, equinos e aves.</p>
+                    <a href="produtos.html#animais" class="btn-secondary">Compre Agora</a>
+                </div>
+                <div class="category-item">
+                    <h4>Vestuário Western</h4>
+                    <p>Botas, chapéus e vestimentas para trabalho e lazer.</p>
+                    <a href="produtos.html#vestuario" class="btn-secondary">Explore</a>
+                </div>
+                <div class="category-item">
+                    <h4>Equipamento & Rancho</h4>
+                    <p>Ferramentas, cercas e materiais de irrigação duráveis.</p>
+                    <a href="produtos.html#rancho" class="btn-secondary">Ver Equipamentos</a>
+                </div>
+                <div class="category-item">
+                    <h4>Caça & Lazer</h4>
+                    <p>Alimentadores, blinds e acessórios para vida selvagem.</p>
+                    <a href="produtos.html#caca" class="btn-secondary">Veja Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="info-section">
+        <div class="container">
+            <h3>Consultoria Nutricional Gratuita</h3>
+            <p>Fale com nossos especialistas para otimizar a dieta de seus animais. Um serviço exclusivo para nossos clientes.</p>
+            <a href="servicos.html" class="btn-primary">Saiba Mais sobre Nossos Serviços</a>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
-
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div>
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="sobre.html">Nossa História</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Localizações</h4>
+                    <p>Uvalde, Alpine, Leakey (Simulação)</p>
+                    <p>Telefone: (830) 555-0000</p>
+                </div>
+                <div class="social-media">
+                    <h4>Siga-nos</h4>
+                    <p> [Facebook] [Instagram] [Youtube] </p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Texas Ranch & Farm Supply (Simulação). Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
