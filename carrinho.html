@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Texas Ranch Wear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">Texas Ranch Wear</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Loja</a></li>
+                    <li><a href="sobre.html">Nossa História</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="minhaconta.html">Minha Conta</a>
+                <a href="carrinho.html" class="active">Carrinho (1)</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-content container">
+        <h2>Sua Sacola de Compras</h2>
+        
+        <div style="display: flex; gap: 40px;">
+            
+            <div style="flex: 2;">
+                <h3 style="color: var(--leather-brown); margin-bottom: 20px;">Itens no Carrinho (1)</h3>
+                
+                <div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; display: flex; align-items: center; background-color: white; border-radius: 5px;">
+                    <img src="https://via.placeholder.com/80x80?text=Bota" alt="Bota de Couro" style="margin-right: 15px;">
+                    <div style="flex-grow: 1;">
+                        <h4 style="color: var(--denim-blue);">Bota Western Clássica Marrom</h4>
+                        <p style="font-size: 0.9em;">Tamanho: 42 | Cor: Marrom | SKU: BWCM-42</p>
+                        <p style="font-weight: bold; color: var(--accent-gold); margin-top: 5px;">R$ 699,00</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <label for="qtd" style="font-size: 0.9em;">Qtd:</label>
+                        <input type="number" id="qtd" value="1" min="1" style="width: 50px; text-align: center; border: 1px solid #ccc;">
+                        <button style="background: none; border: none; color: red; cursor: pointer; margin-top: 5px; display: block; font-size: 0.8em;">Remover Item</button>
+                    </div>
+                </div>
+
+                <p style="margin-top: 20px;"><a href="produtos.html" style="color: var(--denim-blue); text-decoration: none;">&larr; Continuar Navegando na Loja</a></p>
+            </div>
+            
+            <div style="flex: 1; background-color: var(--desert-sand); padding: 25px; border-radius: 8px; height: fit-content;">
+                <h3 style="color: var(--leather-brown); margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">Resumo da Compra</h3>
+                
+                <p style="display: flex; justify-content: space-between; margin-bottom: 10px;"><span>Subtotal:</span> <span>R$ 699,00</span></p>
+                <p style="display: flex; justify-content: space-between; margin-bottom: 10px;"><span>Frete (Entrega Expressa):</span> <span>R$ 49,00</span></p>
+                
+                <h4 style="display: flex; justify-content: space-between; margin-top: 20px; padding-top: 10px; border-top: 2px solid var(--accent-gold);"><span>TOTAL A PAGAR:</span> <span style="font-size: 1.5em; color: var(--leather-brown);">R$ 748,00</span></h4>
+                
+                <a href="#" class="btn-primary" style="width: 100%; margin-top: 25px; text-align: center;">IR PARA PAGAMENTO (Simulação)</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div><h4>Ajuda</h4><ul><li><a href="#">Trocas e Devoluções</a></li><li><a href="#">Localizar Pedido</a></li></ul></div>
+                <div><h4>Institucional</h4><ul><li><a href="sobre.html">Nossa História</a></li><li><a href="#">Trabalhe Conosco</a></li></ul></div>
+                <div class="social-media"><h4>Localização</h4><p>Uvalde, Texas (Simulação)</p><p>Telefone: (830) 555-5555</p></div>
+            </div>
+            <div class="copyright">&copy; 2025 Texas Ranch Wear (Simulação). Todos os direitos reservados.</div>
+        </div>
+    </footer>
+</body>
+</html>
