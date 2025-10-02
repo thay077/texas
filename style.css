@@ -112,7 +112,7 @@ body {
 /* SEÇÃO DESTAQUE (HERO) */
 .hero {
     /* Mude para sua imagem: url('img/banner-home.jpg') */
-    background: url('https://texasfarmstore.cdn.magazord.com.br/resources/logo95.png') no-repeat center center/cover; 
+    background: url('img/banner-home.jpg') no-repeat center center/cover; 
     height: 450px; 
     display: flex;
     align-items: center;
